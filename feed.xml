@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Montres : Le Choix Passionné</title>
+  <link href="https://montres.uk/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://montres.uk/" rel="alternate" type="text/html"/>
+  <id>https://montres.uk/</id>
+  <author>
+    <name>Montres : Le Choix Passionné</name>
+  </author>
+  <subtitle>Six passionnés, six regards sur l'horlogerie : nouveautés, histoire, créateurs, salons et coups de cœur — de la montre accessible à la haute horlogerie</subtitle>
+</feed>
