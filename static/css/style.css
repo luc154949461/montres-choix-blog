@@ -62,47 +62,54 @@ a:hover { color: var(--c-accent-hover); }
 
 img { max-width: 100%; height: auto; display: block; }
 
-/* ========== Header ========== */
+/* ========== Header — Prop C "Six Voix" ========== */
 header {
     background: var(--c-surface);
-    border-bottom: 1px dashed var(--c-border);
     position: relative;
-    
     z-index: 100;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.94);
 }
 
-.header-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 1rem 1.5rem 0.3rem;
+.header-brand {
     text-align: center;
+    padding: 1.8rem 1.5rem 0.4rem;
+    border-bottom: 1px solid var(--c-border-light);
+}
+
+/* Logo 5: Floating index markers — no circle, ultra minimal */
+.header-clock {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 0.7rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cline x1='24' y1='3' x2='24' y2='10' stroke='%231e2a3a' stroke-width='2.5' stroke-linecap='round'/%3E%3Cline x1='24' y1='38' x2='24' y2='45' stroke='%231e2a3a' stroke-width='2.5' stroke-linecap='round'/%3E%3Cline x1='3' y1='24' x2='10' y2='24' stroke='%231e2a3a' stroke-width='2.5' stroke-linecap='round'/%3E%3Cline x1='38' y1='24' x2='45' y2='24' stroke='%231e2a3a' stroke-width='2.5' stroke-linecap='round'/%3E%3Cline x1='38.8' y1='9.2' x2='34.5' y2='13.5' stroke='%231e2a3a' stroke-width='1.8' stroke-linecap='round'/%3E%3Cline x1='9.2' y1='38.8' x2='13.5' y2='34.5' stroke='%231e2a3a' stroke-width='1.8' stroke-linecap='round'/%3E%3Cline x1='38.8' y1='38.8' x2='34.5' y2='34.5' stroke='%231e2a3a' stroke-width='1.8' stroke-linecap='round'/%3E%3Cline x1='9.2' y1='9.2' x2='13.5' y2='13.5' stroke='%231e2a3a' stroke-width='1.8' stroke-linecap='round'/%3E%3Cline x1='24' y1='24' x2='16' y2='12' stroke='%231e2a3a' stroke-width='2.8' stroke-linecap='round'/%3E%3Cline x1='24' y1='24' x2='33' y2='17' stroke='%23c0392b' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='24' r='2.5' fill='%23c0392b'/%3E%3C/svg%3E");
+}
+
+.header-tagline {
+    font-size: 0.78rem;
+    color: var(--c-text-muted);
+    margin-top: 0.15rem;
+    font-weight: 400;
 }
 
 .logo {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--c-text);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    position: relative;
     display: inline-block;
-}
-.logo::before {
-    content: '◎';
-    color: var(--c-accent);
-    margin-right: 0.3em;
-    font-weight: 400;
 }
 .logo:hover { color: var(--c-accent); }
 
 .header-nav {
     max-width: var(--max-w);
     margin: 0 auto;
-    padding: 0.3rem 1.5rem 0.7rem;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 2px solid var(--c-accent);
 }
 
 header nav ul, .header-nav ul {
@@ -129,7 +136,7 @@ header nav ul a:hover { color: var(--c-text); }
     font-family: var(--font-mono) !important;
     font-size: 0.72rem !important;
     padding: 0.2rem 0.55rem;
-    border: 1px dashed var(--c-border);
+    border: 1px solid var(--c-border-light);
     letter-spacing: 0.06em;
 }
 .rss-link:hover {
@@ -142,6 +149,7 @@ main {
     max-width: var(--max-w);
     margin: 0 auto;
     padding: 2rem 1.5rem 4rem;
+    background-image: radial-gradient(circle at 50% 10%, rgba(192, 57, 43, 0.02) 0%, transparent 50%);
 }
 
 /* ========== Breadcrumb ========== */
@@ -166,75 +174,44 @@ main {
 }
 .breadcrumb svg { opacity: 0.4; flex-shrink: 0; }
 
-/* ========== Hero ========== */
+/* ========== Hero — Prop C full-width dark ========== */
 .hero {
-    background: var(--c-hero-bg);
+    background: linear-gradient(135deg, var(--c-hero-bg) 0%, var(--c-steel) 100%);
     color: var(--c-hero-text);
-    padding: 4.5rem 2rem;
-    margin-bottom: 3rem;
-    text-align: center;
+    padding: 3.5rem 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(184, 115, 51, 0.2);
+    border-radius: 6px;
 }
 
-/* Blueprint grid overlay on hero */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background:
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 39px,
-            rgba(184, 115, 51, 0.06) 39px,
-            rgba(184, 115, 51, 0.06) 40px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 39px,
-            rgba(184, 115, 51, 0.06) 39px,
-            rgba(184, 115, 51, 0.06) 40px
-        );
-    pointer-events: none;
-}
-
-/* Circular crosshair mark (caliber reference ring) */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120px;
-    height: 120px;
-    transform: translate(-50%, -50%);
-    border: 1px dashed rgba(184, 115, 51, 0.12);
-    border-radius: 50%;
+    background-image: radial-gradient(circle at 80% 30%, rgba(192, 57, 43, 0.06) 0%, transparent 60%);
     pointer-events: none;
 }
 
 .hero h1 {
-    font-family: var(--font-mono);
-    font-size: 2.2rem;
+    font-family: var(--font-sans);
+    font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0.02em;
     margin-bottom: 0.6rem;
     position: relative;
     z-index: 1;
+    line-height: 1.25;
 }
 
 .hero-tagline {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 0.95rem;
     opacity: 0.7;
-    max-width: 540px;
-    margin: 0 auto;
+    max-width: 600px;
     position: relative;
     z-index: 1;
-    letter-spacing: 0.02em;
     line-height: 1.6;
 }
 
@@ -250,7 +227,7 @@ main {
     margin-bottom: 1.2rem;
     color: var(--c-steel);
     padding-bottom: 0.5rem;
-    border-bottom: 1px dashed var(--c-border);
+    border-bottom: 1px solid var(--c-border-light);
     position: relative;
 }
 .section-title::before {
@@ -261,7 +238,7 @@ main {
 .page-header {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 1px dashed var(--c-border);
+    border-bottom: 1px solid var(--c-border-light);
 }
 .page-header h1 {
     font-family: var(--font-sans);
@@ -285,39 +262,25 @@ main {
 
 .card {
     background: var(--c-surface);
-    background-image: var(--grid-pattern);
-    border: 1px solid var(--c-border-light);
-    border-left: 3px solid var(--c-accent);
+    border-radius: 6px;
+    border-top: 3px solid var(--c-accent);
     overflow: hidden;
-    transition: box-shadow var(--transition), border-color var(--transition);
+    transition: transform var(--transition), box-shadow var(--transition);
     position: relative;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow);
 }
 
 .card-img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
 }
 
-/* Folded corner — technical drawing reference mark */
-.card::before {
-    content: '';
-    position: absolute;
-    
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 20px 20px 0;
-    border-color: transparent var(--c-bg) transparent transparent;
-    z-index: 1;
-}
-
 .card:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--c-border);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card-body {
@@ -374,7 +337,8 @@ main {
     display: inline-block;
     padding: 0.4rem 0.9rem;
     background: var(--c-surface);
-    border: 1px dashed var(--c-border);
+    border: 1px solid var(--c-border-light);
+    border-radius: 4px;
     font-family: var(--font-sans);
     font-size: 0.8rem;
     font-weight: 500;
@@ -386,7 +350,6 @@ main {
     background: var(--c-accent);
     color: white;
     border-color: var(--c-accent);
-    border-style: solid;
 }
 
 .chip-sm {
@@ -464,7 +427,7 @@ main {
 .prose h2 {
     font-size: 1.4rem;
     padding-bottom: 0.4rem;
-    border-bottom: 1px dashed var(--c-border);
+    border-bottom: 1px solid var(--c-border-light);
 }
 .prose h3 { font-size: 1.15rem; }
 
@@ -523,7 +486,7 @@ main {
 
 .prose hr {
     border: none;
-    border-top: 1px dashed var(--c-border);
+    border-top: 1px solid var(--c-border-light);
     margin: 2.5rem 0;
 }
 
@@ -561,7 +524,7 @@ main {
 .article-footer {
     margin-top: 3rem;
     padding-top: 1rem;
-    border-top: 1px dashed var(--c-border);
+    border-top: 1px solid var(--c-border-light);
     font-family: var(--font-mono);
     font-size: 0.78rem;
     color: var(--c-text-muted);
@@ -575,7 +538,7 @@ main {
 .related-articles {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px dashed var(--c-border);
+    border-top: 1px solid var(--c-border-light);
 }
 
 /* ========== Draft banner ========== */
@@ -620,7 +583,7 @@ main {
     cursor: pointer;
 }
 .btn-outline {
-    border: 1px dashed var(--c-border);
+    border: 1px solid var(--c-border-light);
     color: var(--c-text);
     background: var(--c-surface);
 }
@@ -652,7 +615,7 @@ main {
 .series-banner {
     background: var(--c-surface);
     background-image: var(--grid-pattern);
-    border: 1px dashed var(--c-border);
+    border: 1px solid var(--c-border-light);
     border-left: 3px solid var(--c-accent);
     padding: 1rem 1.2rem;
     margin-bottom: 2rem;
@@ -707,7 +670,7 @@ main {
 .series-dot-published { background: var(--c-steel); }
 .series-dot-upcoming {
     background: transparent;
-    border: 1px dashed var(--c-border);
+    border: 1px solid var(--c-border-light);
 }
 
 /* Series index page — full-width rows */
@@ -955,19 +918,13 @@ footer {
 .footer-col { }
 
 .footer-brand {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 0.4rem;
-    color: var(--c-footer-text);
-}
-.footer-brand::before {
-    content: '◎';
     color: var(--c-accent);
-    margin-right: 0.3em;
-    font-weight: 400;
 }
 
 .footer-tagline {
@@ -1003,7 +960,7 @@ footer ul a:hover {
     max-width: var(--max-w);
     margin: 0 auto;
     padding: 1rem 1.5rem;
-    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     text-align: center;
 }
 .footer-privacy p {

@@ -32,13 +32,23 @@
 </head>
 <body>
     <header>
-        <div class="header-inner">
+        <div class="header-brand">
+            <span class="header-clock" aria-hidden="true"></span>
             <a href="/" class="logo">Montres : Le Choix Passionné</a>
+            <p class="header-tagline">Six passionnés, six regards sur l'horlogerie</p>
         </div>
         <nav class="header-nav">
             <ul>
                 
+                <li><a href="/coups-de-coeur/">Coups de Cœur</a></li>
                 
+                <li><a href="/culture/">Culture</a></li>
+                
+                <li><a href="/guides/">Guides</a></li>
+                
+                <li><a href="/histoire/">Histoire</a></li>
+                
+                <li><a href="/series/">Series</a></li>
                 <li><a href="/recherche/" class="search-link" title="Rechercher">Recherche</a></li>
                 <li><a href="/feed.xml" class="rss-link" title="Flux RSS">RSS</a></li>
             </ul>
@@ -68,7 +78,20 @@
 </header>
 
 
-<p class="empty-state">Aucun article dans cette categorie pour le moment.</p>
+<div class="card-grid">
+    
+    <article class="card">
+        <picture><source media="(max-width: 768px)" srcset="/static/images/plongeur-vintage-exploration-400w.webp" type="image/webp"><source srcset="/static/images/plongeur-vintage-exploration-800w.webp 800w, /static/images/plongeur-vintage-exploration.webp 2000w" sizes="300px" type="image/webp"><img class="card-img" src="/static/images/plongeur-vintage-exploration.jpg" alt="" loading="eager" fetchpriority="high"></picture>
+        <div class="card-body">
+            <h3><a href="/histoire/fifty-fathoms-submariner-seahorse-les-trois-montres-qui-ont-invente-la-plongee-au-poignet/">Fifty Fathoms, Submariner, Seahorse : les trois montres qui ont inventé la plongée au poignet</a></h3>
+            <p>En l&#39;espace de quatre ans, entre 1953 et 1957, Blancpain, Rolex et Omega inventent simultanément la montre de plongée moderne. Du cahier des charges du capitaine Maloubier à la Submariner testée en Méditerranée, retour sur la genèse parallèle de trois légendes horlogères.</p>
+            
+            <time datetime="2024-02-05">5 fevrier 2024</time>
+            
+        </div>
+    </article>
+    
+</div>
 
 
 
@@ -86,7 +109,15 @@
                 <ul>
                     <li><a href="/">Accueil</a></li>
                     
+                    <li><a href="/coups-de-coeur/">Coups de Cœur</a></li>
                     
+                    <li><a href="/culture/">Culture</a></li>
+                    
+                    <li><a href="/guides/">Guides</a></li>
+                    
+                    <li><a href="/histoire/">Histoire</a></li>
+                    
+                    <li><a href="/series/">Series</a></li>
                 </ul>
             </div>
             <div class="footer-col">
