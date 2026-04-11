@@ -164,6 +164,19 @@ main {
     letter-spacing: 0.02em;
     overflow: hidden;
 }
+/* On wide screens align breadcrumb with the centered article layout */
+@media (min-width: 1200px) {
+    .breadcrumb:has(~ .article-layout) {
+        max-width: calc(760px + 3rem + 300px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 1600px) {
+    .breadcrumb:has(~ .article-layout) {
+        max-width: calc(860px + 4rem + 360px);
+    }
+}
 .breadcrumb a { color: var(--c-text-muted); flex-shrink: 0; }
 .breadcrumb a:hover { color: var(--c-accent); }
 .breadcrumb span {
