@@ -377,12 +377,14 @@ main {
     .article-layout {
         grid-template-columns: minmax(0, 760px) 300px;
         gap: 3rem;
+        justify-content: center;
     }
 }
 @media (min-width: 1600px) {
     .article-layout {
         grid-template-columns: minmax(0, 860px) 360px;
         gap: 4rem;
+        justify-content: center;
     }
 }
 
