@@ -366,9 +366,31 @@ main {
     font-size: 0.72rem;
 }
 
+/* ========== Article layout ========== */
+.article-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+@media (min-width: 1200px) {
+    .article-layout {
+        grid-template-columns: minmax(0, 760px) 300px;
+        gap: 3rem;
+    }
+}
+@media (min-width: 1600px) {
+    .article-layout {
+        grid-template-columns: minmax(0, 860px) 360px;
+        gap: 4rem;
+    }
+}
+
+.article-main { min-width: 0; }
+
 /* ========== Article ========== */
 .article {
-    max-width: 760px;
+    /* width controlled by grid column */
 }
 
 .article-header {
@@ -549,6 +571,75 @@ main {
     padding-top: 2rem;
     border-top: 1px solid var(--c-border-light);
 }
+
+/* ========== Article sidebar ========== */
+.article-sidebar {
+    min-width: 0;
+}
+@media (min-width: 1200px) {
+    .article-sidebar {
+        position: sticky;
+        top: 2rem;
+    }
+}
+
+.sidebar-heading {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-text-muted);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--c-accent);
+}
+
+.sidebar-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-card {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0.8rem;
+    align-items: start;
+    padding: 0.7rem;
+    background: var(--c-surface);
+    border-radius: 4px;
+    border-left: 2px solid var(--c-border-light);
+    transition: border-color var(--transition);
+}
+.sidebar-card:hover { border-left-color: var(--c-accent); }
+
+.sidebar-card img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.sidebar-card-body { min-width: 0; }
+
+.sidebar-card-body .article-category {
+    display: block;
+    font-size: 0.65rem;
+    margin-bottom: 0.3rem;
+}
+
+.sidebar-card-body h3 {
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0;
+}
+.sidebar-card-body h3 a {
+    color: var(--c-text);
+    text-decoration: none;
+}
+.sidebar-card-body h3 a:hover { color: var(--c-accent); }
 
 /* ========== Draft banner ========== */
 .draft-banner {
