@@ -162,16 +162,11 @@ main {
     font-size: 0.75rem;
     color: var(--c-text-muted);
     margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content-w);
     letter-spacing: 0.02em;
     overflow: hidden;
-}
-/* On wide screens align breadcrumb with the centered article layout */
-@media (min-width: 1200px) {
-    .breadcrumb:has(~ .article-layout) {
-        max-width: var(--content-w);
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 .breadcrumb a { color: var(--c-text-muted); flex-shrink: 0; }
 .breadcrumb a:hover { color: var(--c-accent); }
