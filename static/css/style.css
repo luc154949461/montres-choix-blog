@@ -271,15 +271,15 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
+    max-width: calc(5 * 300px + 4 * 1.5rem);
+    margin-left: auto;
+    margin-right: auto;
 }
 @media (min-width: 1100px) {
     .card-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (min-width: 1400px) {
     .card-grid { grid-template-columns: repeat(5, 1fr); }
-}
-@media (min-width: 1700px) {
-    .card-grid { grid-template-columns: repeat(6, 1fr); }
 }
 
 .card {
