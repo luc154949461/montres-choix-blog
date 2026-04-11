@@ -189,6 +189,9 @@ main {
     color: var(--c-hero-text);
     padding: 3.5rem 2rem;
     margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content-w);
     text-align: left;
     position: relative;
     overflow: hidden;
@@ -225,7 +228,12 @@ main {
 }
 
 /* ========== Sections ========== */
-.section { margin-bottom: 3rem; }
+.section {
+    max-width: var(--content-w);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
 
 .section-title {
     font-family: var(--font-sans);
@@ -245,6 +253,9 @@ main {
 }
 
 .page-header {
+    max-width: var(--content-w);
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--c-border-light);
@@ -786,6 +797,9 @@ main {
 
 /* Series index page — full-width rows */
 .series-list {
+    max-width: var(--content-w);
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -1068,7 +1082,7 @@ footer ul a:hover {
 }
 
 .footer-privacy {
-    max-width: var(--max-w);
+    max-width: var(--content-w);
     margin: 0 auto;
     padding: 1rem 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1082,7 +1096,7 @@ footer ul a:hover {
 }
 
 .footer-bottom {
-    max-width: var(--max-w);
+    max-width: var(--content-w);
     margin: 0 auto;
     padding: 1rem 1.5rem 1.5rem;
     font-family: var(--font-mono);
@@ -1209,7 +1223,7 @@ a:focus-visible,
 }
 
 /* ---------- Search ---------- */
-.search-page { max-width: var(--max-w); margin: 0 auto; }
+.search-page { max-width: var(--content-w); margin: 0 auto; }
 .search-page input[type="search"] {
     width: 100%;
     padding: 0.9rem 1.2rem;
