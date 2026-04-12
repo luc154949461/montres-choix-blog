@@ -1241,3 +1241,18 @@ a:focus-visible,
     margin-bottom: 1.5rem;
 }
 .search-link { font-size: 0.9rem; }
+
+/* ── POI / liens internes ── */
+.poi-link { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--c-accent); text-underline-offset: 3px; font-weight: 500; }
+.poi-link:hover { color: var(--c-accent); text-decoration-style: solid; }
+.page-header-inner { /* passthrough — main fournit le max-width */ }
+.category-label { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-accent); margin-bottom: 0.4rem; }
+.page-header-desc { font-size: 0.92rem; color: var(--c-text-muted); margin-top: 0.5rem; max-width: 600px; line-height: 1.6; }
+.related-cat { font-family: var(--font-mono); font-size: 0.68rem; color: var(--c-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+.chip-tag { display: inline-block; padding: 0.25rem 0.75rem; font-size: 0.78rem; background: var(--c-accent-light); border: 1px solid var(--c-border); color: var(--c-accent); font-family: var(--font-mono); letter-spacing: 0.03em; }
+.chip-tag:hover { background: var(--c-accent); color: white; border-color: var(--c-accent); }
+.chip-xs { padding: 0.1rem 0.45rem; font-size: 0.67rem; }
+.chip-shared { background: var(--c-accent-light); border-color: var(--c-accent); color: var(--c-accent); }
+.article-tags-section { display: flex; align-items: baseline; gap: 0.75rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px dashed var(--c-border); }
+.tags-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-text-muted); white-space: nowrap; flex-shrink: 0; }
+.article-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
