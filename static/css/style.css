@@ -539,6 +539,10 @@ main {
 }
 
 .lecture img {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
     margin: 1.5rem 0;
     border: 1px solid var(--c-border-light);
 }
